@@ -57,7 +57,7 @@ pip install pyinstaller
 2. Create the executable
 
 ```bash
-pyinstaller --onefile --windowed name_of_file.py
+pyinstaller MF4_Reader.py --onefile --windowed --icon=assets/app_icon.ico
 ```
 This will generate dist/name_of_file.exe, which you can run on any Windows system (if compiled on windows) — no Python installation required.
 
