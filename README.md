@@ -8,6 +8,7 @@
 
 - Load `.mf4` files recorded from CAN bus tools
 - Load `.dbc` files to decode CAN messages into human-readable signals
+- Load `.mdf` files already decoded from a dbc file
 - Display available decoded signals in a list
 - Plot selected signals:
   - All on the same graph, or
@@ -57,7 +58,7 @@ pip install pyinstaller
 2. Create the executable
 
 ```bash
-pyinstaller MF4_Reader.py --onefile --windowed --icon=assets/app_icon.ico
+python -m PyInstaller MF4_Reader.py --onefile --windowed --icon=assets/app_icon.ico --hidden-import=matplotlib.backends.backend_tkagg
 ```
 This will generate dist/name_of_file.exe, which you can run on any Windows system (if compiled on windows) — no Python installation required.
 
